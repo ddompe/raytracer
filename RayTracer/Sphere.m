@@ -28,7 +28,7 @@
  */
 - (bool) doesItersectsRayWithOriginAt: (RTVector *)origin
                      andTerminationAt: (RTVector *)end
-                        storeResultAt: (float)result;
+                        storeResultAt: (float *)result;
 {
   RTVector direction,tmp;
   float a, b, c;
@@ -75,13 +75,13 @@
     // if t0 is less than zero, the intersection point is at t1
     if (t0 < 0)
     {
-      result = t1;
+      *result = t1;
       return true;
     }
     // else the intersection point is at t0
     else
     {
-      result = t0;
+      *result = t0;
       return true;
     }
   }

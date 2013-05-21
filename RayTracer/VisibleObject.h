@@ -10,9 +10,10 @@
 #import "RayMath.h"
 
 @protocol VisibleObject <NSObject>
+//NSUInteger _bgColor[3];
 
 - (bool) doesItersectsRayWithOriginAt: (RTVector *)origin
                      andTerminationAt: (RTVector *)end
-                        storeResultAt: (float)result;
+                        storeResultAt: (float *)result;
 
 @end

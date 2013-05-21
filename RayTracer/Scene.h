@@ -11,6 +11,11 @@
 @interface Scene : NSObject {
   NSMutableSet *objects;
   NSMutableSet *lightSources;
+  NSUInteger _bgColor[3];
 }
+
+@property (retain) NSMutableSet *objects;
+@property (retain) NSMutableSet *lightSources;
+@property (nonatomic) NSUInteger *bgColor;
 
 @end
