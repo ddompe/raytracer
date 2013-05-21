@@ -17,6 +17,12 @@
 		A5082035174954BB00DD02E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5082015174954BB00DD02E2 /* Cocoa.framework */; };
 		A508203D174954BB00DD02E2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A508203B174954BB00DD02E2 /* InfoPlist.strings */; };
 		A5082040174954BB00DD02E2 /* RayTracerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A508203F174954BB00DD02E2 /* RayTracerTests.m */; };
+		A508204B1749554500DD02E2 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = A508204A1749554500DD02E2 /* Scene.m */; };
+		A508204E1749558F00DD02E2 /* LightSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A508204D1749558F00DD02E2 /* LightSource.m */; };
+		A50820541749582600DD02E2 /* Sphere.m in Sources */ = {isa = PBXBuildFile; fileRef = A50820531749582600DD02E2 /* Sphere.m */; };
+		A50820591749615200DD02E2 /* RayMath.c in Sources */ = {isa = PBXBuildFile; fileRef = A50820581749615200DD02E2 /* RayMath.c */; };
+		A530F900174AF3A60029C297 /* RenderEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = A530F8FF174AF3A60029C297 /* RenderEngine.m */; };
+		A530F903174B00DC0029C297 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5082018174954BB00DD02E2 /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,18 @@
 		A508203C174954BB00DD02E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A508203E174954BB00DD02E2 /* RayTracerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RayTracerTests.h; sourceTree = "<group>"; };
 		A508203F174954BB00DD02E2 /* RayTracerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RayTracerTests.m; sourceTree = "<group>"; };
+		A50820491749554500DD02E2 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		A508204A1749554500DD02E2 /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
+		A508204C1749558F00DD02E2 /* LightSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LightSource.h; sourceTree = "<group>"; };
+		A508204D1749558F00DD02E2 /* LightSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LightSource.m; sourceTree = "<group>"; };
+		A50820521749582500DD02E2 /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = "<group>"; };
+		A50820531749582600DD02E2 /* Sphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sphere.m; sourceTree = "<group>"; };
+		A508205617495C9C00DD02E2 /* VisibleObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VisibleObject.h; sourceTree = "<group>"; };
+		A508205717495D5400DD02E2 /* RayMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RayMath.h; sourceTree = "<group>"; };
+		A50820581749615200DD02E2 /* RayMath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = RayMath.c; sourceTree = "<group>"; };
+		A530F8FE174AF3A60029C297 /* RenderEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderEngine.h; sourceTree = "<group>"; };
+		A530F8FF174AF3A60029C297 /* RenderEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenderEngine.m; sourceTree = "<group>"; };
+		A530F901174AF3F60029C297 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A530F903174B00DC0029C297 /* AppKit.framework in Frameworks */,
 				A5082016174954BB00DD02E2 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +94,7 @@
 		A5082009174954BA00DD02E2 = {
 			isa = PBXGroup;
 			children = (
+				A530F901174AF3F60029C297 /* ApplicationServices.framework */,
 				A508201B174954BB00DD02E2 /* RayTracer */,
 				A5082038174954BB00DD02E2 /* RayTracerTests */,
 				A5082014174954BB00DD02E2 /* Frameworks */,
@@ -118,6 +138,17 @@
 				A5082028174954BB00DD02E2 /* AppDelegate.m */,
 				A508202A174954BB00DD02E2 /* MainMenu.xib */,
 				A508201C174954BB00DD02E2 /* Supporting Files */,
+				A50820491749554500DD02E2 /* Scene.h */,
+				A508204A1749554500DD02E2 /* Scene.m */,
+				A50820521749582500DD02E2 /* Sphere.h */,
+				A50820531749582600DD02E2 /* Sphere.m */,
+				A508204C1749558F00DD02E2 /* LightSource.h */,
+				A508204D1749558F00DD02E2 /* LightSource.m */,
+				A508205617495C9C00DD02E2 /* VisibleObject.h */,
+				A508205717495D5400DD02E2 /* RayMath.h */,
+				A50820581749615200DD02E2 /* RayMath.c */,
+				A530F8FE174AF3A60029C297 /* RenderEngine.h */,
+				A530F8FF174AF3A60029C297 /* RenderEngine.m */,
 			);
 			path = RayTracer;
 			sourceTree = "<group>";
@@ -263,6 +294,11 @@
 			files = (
 				A5082022174954BB00DD02E2 /* main.m in Sources */,
 				A5082029174954BB00DD02E2 /* AppDelegate.m in Sources */,
+				A508204B1749554500DD02E2 /* Scene.m in Sources */,
+				A508204E1749558F00DD02E2 /* LightSource.m in Sources */,
+				A50820541749582600DD02E2 /* Sphere.m in Sources */,
+				A50820591749615200DD02E2 /* RayMath.c in Sources */,
+				A530F900174AF3A60029C297 /* RenderEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +488,7 @@
 				A5082045174954BB00DD02E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5082046174954BB00DD02E2 /* Build configuration list for PBXNativeTarget "RayTracerTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +497,7 @@
 				A5082048174954BB00DD02E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
